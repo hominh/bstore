@@ -118,6 +118,19 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $parent = Category::where('parent_id',$id)->count();
+        if($parent == 0) {
+            $cate->delete();
+            return redirect()->route('admin.category.list')->with(['flash_level'=>'success','flash_message'=>'Delete success']);
+        }
+        else {
+            echo "<script type='text/javascript'>
+            alert('Can't delete cateogry);
+            window.location = '";
+            echo route('admin.category.list');
+            echo "'
+            </script>";
+        }
+
     }
 }
