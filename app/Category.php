@@ -11,8 +11,8 @@ class Category extends Model
 
     protected $fillable = ['name','alias','title','keyword','description','parent_id','hassub','status','user_id'];
 
-    public function post()
+    public function product()
     {
-    	return $this->hasMany('App\Post');
+    	return $this->hasMany('App\Product');
     }
 }
