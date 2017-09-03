@@ -8,20 +8,20 @@ function confirmDelete(msg) {
 }
 
 $(document).ready(function() {
-	$("a#delImagePost").click(function(){
-		var url = "http://localhost:8000/admin/post/delImg/";
-		var _token = $("form[name='frmEditPost']").find("input[name='_token']").val();
-		var idPost = $('#holder').attr("idHinh");
+	$("a#delImageSlide").click(function(){
+		var url = "http://localhost:8000/admin/slide/delImg/";
+		var _token = $("form[name='frmEditSlide']").find("input[name='_token']").val();
+		var idslide = $('#holder').attr("idHinh");
 		var srcImage = $(this).parent().find("img").attr("src");
 		var id = $(this).parent().find("img").attr("id");
 		$.ajax({
-			url: url+idPost,
+			url: url+idslide,
 			type: 'GET',
 			cache: false,
-			data: {"_token":_token,"idPost":idPost,"urlImage":srcImage},
+			data: {"_token":_token,"idslide":idslide,"urlImage":srcImage},
 			success: function (data) {
 				if(data == "ok") {
-					$("#"+id).remove();
+					$("#holder").remove();
 				}
 			}
 		});

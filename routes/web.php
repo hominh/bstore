@@ -29,4 +29,14 @@ Route::group(['prefix'=>'admin'],function(){
         Route::get('edit/{id}',['as'=>'admin.category.edit','uses'=>'Admin\CategoryController@edit']);
         Route::post('update/{id}',['as'=>'admin.category.update','uses'=>'Admin\CategoryController@update']);
     });
+
+    Route::group(['prefix'=>'slide'],function(){
+        Route::get('list',['as'=>'admin.slide.list','uses'=>'Admin\SlideController@index']);
+        Route::get('create',['as'=>'admin.slide.create','uses'=>'Admin\SlideController@create']);
+        Route::post('store',['as'=>'admin.slide.store','uses'=>'Admin\SlideController@store']);
+        Route::get('delete/{id}',['as'=>'admin.slide.delete','uses'=>'Admin\SlideController@destroy']);
+        Route::get('edit/{id}',['as'=>'admin.slide.edit','uses'=>'Admin\SlideController@edit']);
+        Route::post('update/{id}',['as'=>'admin.slide.update','uses'=>'Admin\SlideController@update']);
+        Route::get('delImg/{id}',['as'=>'admin.slide.delImg','uses'=>'Admin\SlideController@getDelImg']);
+    });
 });

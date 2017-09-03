@@ -81,7 +81,6 @@
                         </div>
                     </div>
                     <div class="portlet-body form">
-
                         <div class="form-actions">
                             <button type="submit" class="btn btn-success">Publish</button>
                             <button type="submit" class="btn blue">Publish & edit</button>
@@ -99,7 +98,7 @@
                         <div class="form-group">
                             <select class="form-control" name="status">
                                 <option value={!! $currentStatus[0]->status !!} selected>{!! $currentNameStatus !!}</option>
-                                <option value={!! $otherStatus[0]->status !!}>{!! $otherNameStatus !!}</option>
+                                <option value={!! $otherStatus !!}>{!! $otherNameStatus !!}</option>
                             </select>
                         </div>
                     </div>

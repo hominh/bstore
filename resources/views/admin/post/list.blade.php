@@ -5,7 +5,7 @@
 			<div class="portlet box green">
 				<div class="portlet-title">
 					<div class="caption">
-						<i class="fa fa-globe"></i>Posts 
+						<i class="fa fa-globe"></i>Posts
 					</div>
 					<div class="tools">
 						<div class="dt-buttons">
@@ -14,7 +14,7 @@
 					</div>
 				</div>
 				<div class="portlet-body">
-					
+
 					<table class="table table-striped table-bordered table-hover" id="">
 						<thead>
 							<tr>
@@ -26,19 +26,19 @@
 								<th> Edit </th>
 								<th> Delete </th>
 							</tr>
-                      	</thead>
-                      	<tbody>
-                      	<?php $stt = 0; ?>
-                      	@foreach($data as $item)
-                      	<?php $stt = $stt + 1; ?>
-                      		<tr>
+            	</thead>
+            	<tbody>
+            	<?php $stt = 0; ?>
+            	@foreach($data as $item)
+            	<?php $stt = $stt + 1; ?>
+            		<tr>
 								<td> {!! $stt !!} </td>
 								<td> {!! $item->name !!} </td>
 								<td> {!! $item->status !!} </td>
 								<td> {!! $item->created_at !!} </td>
 								<td> {!! $item->uname !!} </td>
-								<td> <a href="{{ URL::route('admin.post.edit',$item->id) }}">Edit</a> </td>
-								<td> <a onclick="return confirmDelete('Are you sure Delete?')" href="{{ URL::route('admin.post.delete',$item->id) }}"> Delete</a> </td>
+								<td> <a href="{{ URL::route('admin.post.edit',$item->id) }}">Edi1dasdt</a> </td>
+								<td> <a onclick="return confirmDelete('Are you sure Delete?')" href="{{ URL::route('admin.post.delete',$item->id) }}"> Deletesdasd</a> </td>
                       		</tr>
                       	@endforeach()
                       	</tbody>
@@ -47,8 +47,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 @endsection()
-
-

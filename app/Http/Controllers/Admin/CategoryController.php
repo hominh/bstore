@@ -84,7 +84,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -96,6 +96,35 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
+        $currentNameStatus = "";
+        $otherNameStatus = "";
+        $currentStatus = DB::table('categories')
+                        ->select('status')
+                        ->where('id','=',$id)
+                        ->get();
+        $curentNumberOfStatus = $currentStatus[0]->status;
+        if($curentNumberOfStatus == 1) {
+            $currentNameStatus = "Actived";
+            $otherNameStatus  = "Disable";
+        }
+        else {
+            $currentNameStatus = "Disable";
+            $otherNameStatus  = "Actived";
+        }
+        $otherStatus = 0;
+        if($currentStatus == '0') {
+          $otherStatus = 1;
+        }
+        else if($currentStatus == '1') {
+          $otherStatus = 0;
+        }
+        /*$otherStatus = DB::table('categories')
+                        ->select('status')
+                        ->where('id','<>',$id)
+                        ->get();*/
+        $data = Category::findOrFail($id)->toArray();
+        $parent = Category::select('id','name','parent_id')->get()->toArray();
+        return view('admin.category.edit',compact('data','parent','currentStatus','otherStatus','currentNameStatus','otherNameStatus'));
     }
 
     /**
@@ -107,7 +136,20 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $this->validate($request, [
+          'name' => 'required|min:5',
+      ]);
+      $category = Category::find($id);
+      $category->name = $request->name;
+      $category->alias = changeTitle($request->name);
+      $category->parent_id = $request->parent;
+      $category->title = $request->title;
+      $category->keyword = $request->keyword;
+      $category->description = $request->description;
+      $category->status = $request->status;
+      $category->user_id = Auth::user()->id;
+      $category->save();
+      return redirect()->route('admin.category.list');
     }
 
     /**
@@ -120,16 +162,17 @@ class CategoryController extends Controller
     {
         $parent = Category::where('parent_id',$id)->count();
         if($parent == 0) {
-            $cate->delete();
-            return redirect()->route('admin.category.list')->with(['flash_level'=>'success','flash_message'=>'Delete success']);
+          $category = Category::find($id);
+          $category->delete();
+          return redirect()->route('admin.category.list')->with(['flash_level'=>'success','flash_message'=>'Delete success']);
         }
         else {
-            echo "<script type='text/javascript'>
-            alert('Can't delete cateogry);
-            window.location = '";
-            echo route('admin.category.list');
-            echo "'
-            </script>";
+          echo "<script type='text/javascript'>
+          alert('Can't delete cateogry);
+          window.location = '";
+          echo route('admin.category.list');
+          echo "'
+          </script>";
         }
 
     }
