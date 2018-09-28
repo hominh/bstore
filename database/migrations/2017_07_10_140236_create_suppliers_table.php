@@ -15,8 +15,8 @@ class CreateSuppliersTable extends Migration
         Schema::create('suppliers', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('compannyame');
-            $table->string('contacname');
+            $table->string('companyname');
+            $table->string('contactname');
             $table->string('contactitle');
             $table->string('address');
             $table->string('city');
@@ -28,6 +28,8 @@ class CreateSuppliersTable extends Migration
             $table->string('website');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->integer('product_id')->unsigned();
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
         });
     }
 

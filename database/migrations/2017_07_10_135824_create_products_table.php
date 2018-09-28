@@ -16,8 +16,10 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('name');
+            $table->string('alias');
             $table->string('title');
             $table->string('keyword');
+            $table->string('description');
             $table->string('content');
             $table->string('compositions');
             $table->string('styles');
@@ -26,11 +28,14 @@ class CreateProductsTable extends Migration
             $table->integer('unitprice');
             $table->integer('unitsonorder');
             $table->integer('review_id');
-            $table->integer('supplier_id');
+            $table->integer('status');
+            $table->text('properties');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->integer('supplier_id')->unsigned();
+            $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('suppliers');
         });
     }
 

@@ -9,6 +9,7 @@ use DB;
 use Auth;
 use File;
 
+
 class SlideController extends Controller
 {
     /**
@@ -79,7 +80,10 @@ class SlideController extends Controller
      */
     public function edit($id)
     {
-        $data = Slide::findOrFail($id)->get();
+        $data = Slide::findOrFail($id)->toArray();
+
+        $currentNameStatus = "";
+        $otherNameStatus = "";
         $currentStatus = DB::table('slides')
                         ->select('status')
                         ->where('id','=',$id)
@@ -138,7 +142,9 @@ class SlideController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $slide = Slide::find($id);
+      $slide->delete();
+      return redirect()->route('admin.slide.list')->with(['flash_level'=>'success','flash_message'=>'Delete success']);
     }
 
     public function getDelImg($id,Request $request) {

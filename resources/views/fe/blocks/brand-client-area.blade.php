@@ -11,140 +11,16 @@
 						<!-- CLIENT-CAROUSEL START -->
 						<div class="client-carousel">
 							<!-- CLIENT-SINGLE START -->
+							@foreach($brands as $item)
 							<div class="item">
 								<div class="single-client">
 									<a href="#">
-										<img src="img/brand/1.png" alt="brand-client" />
+										<img src="{!! asset($item->image)  !!}" alt="{!! $item->name !!}" />
 									</a>
-								</div>									
+								</div>
 							</div>
+							@endforeach()
 							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/2.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/3.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/4.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/5.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/1.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->									
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/3.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/2.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/3.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/4.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/5.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/1.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->									
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/3.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/4.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->
-							<!-- CLIENT-SINGLE START -->								
-							<div class="item">
-								<div class="single-client">
-									<a href="#">
-										<img src="img/brand/5.png" alt="brand-client" />
-									</a>
-								</div>									
-							</div>
-							<!-- CLIENT-SINGLE END -->									
 						</div>
 						<!-- CLIENT-CAROUSEL END -->
 					</div>

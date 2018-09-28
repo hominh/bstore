@@ -11,7 +11,7 @@
     </div>
 @endif
     <div class="row">
-        {{ Form::open(array('route' => ['admin.slide.update', $data[0]->id], 'class' => 'form-horizontal','files'=>true,'name'=>'frmEditSlide')) }}
+        {{ Form::open(array('route' => ['admin.slide.update', $data['id']], 'class' => 'form-horizontal','files'=>true,'name'=>'frmEditSlide')) }}
             <div class="col-md-8">
                 <div class="portlet light bordered">
                     <div class="portlet-title">
@@ -24,11 +24,11 @@
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="control-label required">Text link</label>
-                                <input type="text" class="form-control" placeholder="Text link" name="textlink" value="{!! old('textlink',isset($data) ? $data[0]->textlink:null ) !!}">
+                                <input type="text" class="form-control" placeholder="Text link" name="textlink" value="{!! old('textlink',isset($data) ? $data['textlink']:null ) !!}">
                             </div>
                             <div class="form-group">
                                 <label class="control-label required">Link</label>
-                                <input type="text" class="form-control" placeholder="Link" name="link" value="{!! old('link',isset($data) ? $data[0]->link:null ) !!}">
+                                <input type="text" class="form-control" placeholder="Link" name="link" value="{!! old('link',isset($data) ? $data['link']:null ) !!}">
                             </div>
                             <div class="form-group">
                               <label class="">Image</label>
@@ -40,10 +40,10 @@
 
                                      <a href="javascript:void(0)" type="button" id="delImageSlide" class="btn btn-primary"><i class="fa fa-times"></i>Delete image</a>
                                   </span>
-                                  <input id="thumbnail" class="form-control" type="text" name="image" value="{!! old('intro',isset($data) ? $data[0]->image:null ) !!}">
+                                  <input id="thumbnail" class="form-control" type="text" name="image" value="{!! old('intro',isset($data) ? $data['image']:null ) !!}">
 
                                 </div>
-                                <img id="holder" style="margin-top:15px;max-height:100px;" src="{!! asset($data[0]->image)  !!}" idHinh="{!! $data[0]->id !!}" id="{!! $data[0]->id !!}">
+                                <img id="holder" style="margin-top:15px;max-height:100px;" src="{!! asset($data['image'])  !!}" idHinh="{!! $data['id'] !!}" id="{!! $data['id'] !!}">
 
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                         <div class="form-body">
                             <div class="form-group">
                                 <label class="">SEO title</label>
-                                <input type="text" class="form-control" placeholder="Title" name="title" value="{!! old('title',isset($data) ? $data[0]->title:null ) !!}">
+                                <input type="text" class="form-control" placeholder="Title" name="title" value="{!! old('title',isset($data) ? $data['title']:null ) !!}">
                                 <div class="help-ts">
                                     <i class="fa fa-info-circle"></i>
                                     <span>Title tags are displayed on search engine results pages (SERPs) as the clickable headline for a given result, and are important for usability, SEO, and social sharing. The title tag of a web page is meant to be an accurate and concise description of a page's content.</span>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="">SEO description</label>
-                                <input type="text" class="form-control" placeholder="Description" name="description" value="{!! old('description',isset($data) ? $data[0]->description:null ) !!}">
+                                <input type="text" class="form-control" placeholder="Description" name="description" value="{!! old('description',isset($data) ? $data['description']:null ) !!}">
                                 <div class="help-ts">
                                     <i class="fa fa-info-circle"></i>
                                     <span> The meta description is a ~160 character snippet, a tag in HTML, that summarizes a page's content. Search engines show the meta description in search results mostly when the searched for phrase is contained in the description. Optimizing the meta description is a very important aspect of on-page SEO.</span>
@@ -102,7 +102,7 @@
                     <div class="portlet-body form">
                         <div class="form-group">
                             <select class="form-control" name="status">
-                                <option value={!! $data[0]->status !!} selected>{!! $currentNameStatus !!}</option>
+                                <option value={!! $data['status'] !!} selected>{!! $currentNameStatus !!}</option>
                                 <option value={!! $otherStatus !!}>{!! $otherNameStatus !!}</option>
                             </select>
                         </div>

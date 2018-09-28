@@ -265,7 +265,7 @@
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<div class="one-column-add zoom-img">
 							<a href="#"><img src="img/product/shope-add2.jpg" alt="shope-add" /></a>
-						</div>								
+						</div>
 					</div>
 				</div>
 			</div>
@@ -309,7 +309,7 @@
 												<span class="price">$16.51</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -343,7 +343,7 @@
 												<span class="price">$16.51</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -377,7 +377,7 @@
 												<span class="price">$16.51</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -411,7 +411,7 @@
 												<span class="price">$16.51</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -445,7 +445,7 @@
 												<span class="price">$16.51</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 							</div>
 						</div>
@@ -490,7 +490,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 									<div class="item">
 										<div class="single-product-item">
@@ -524,7 +524,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 									<div class="item">
 										<div class="single-product-item">
@@ -558,7 +558,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 								</div>
 							</div>
@@ -596,7 +596,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 									<div class="item">
 										<div class="single-product-item">
@@ -630,7 +630,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 									<div class="item">
 										<div class="single-product-item">
@@ -664,7 +664,7 @@
 													<span class="price">$16.51</span>
 												</div>
 											</div>
-										</div>							
+										</div>
 									</div>
 								</div>
 							</div>
@@ -720,7 +720,7 @@
 												<span class="old-price">$27.00</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -755,7 +755,7 @@
 												<span class="old-price">$27.00</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 								<div class="item">
 									<div class="single-product-item">
@@ -790,7 +790,7 @@
 												<span class="old-price">$27.00</span>
 											</div>
 										</div>
-									</div>							
+									</div>
 								</div>
 							</div>
 						</div>
@@ -813,7 +813,7 @@
 							<a href="#"><img src="img/product/one-helf2.jpg" alt="shope-add" /></a>
 						</div>
 						<!-- ONEHALF-ADD END -->
-					</div>						
+					</div>
 				</div>
 				<!-- IMAGE-ADD-AREA END -->
 			</div>

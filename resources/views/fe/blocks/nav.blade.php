@@ -40,7 +40,7 @@
 								<div class="total-shipping-prices">
 									<span class="shipping-total">$24.95</span>
 									<span>Total</span>
-								</div>										
+								</div>
 							</div>
 							<div class="shipping-checkout-btn">
 								<a href="checkout.html">Check out <i class="fa fa-chevron-right"></i></a>
@@ -55,42 +55,27 @@
 						<ul class="list-inline mega-menu">
 							<li class="active"><a href="index.html">Home</a>
 								<!-- DROPDOWN MENU START -->
-								<div class="home-var-menu">
+								<!--<div class="home-var-menu">
 									<ul class="home-menu">
 										<li><a href="index.html">Home variation 1</a></li>
 										<li><a href="index-2.html">Home variation 2</a></li>
-									</ul>												
+									</ul>
 								</div>
 								<!-- DROPDOWN MENU END -->
 							</li>
-							<li>
-								<a href="shop-gird.html">Women</a>
-								<!-- DRODOWN-MEGA-MENU START -->
-								<div class="drodown-mega-menu">
-									<div class="left-mega col-xs-6">
-										<div class="mega-menu-list">
-											<a class="mega-menu-title" href="shop-gird.html">TOPS</a>
-											<ul>
-												<li><a href="shop-gird.html">T-shirts</a></li>
-												<li><a href="shop-gird.html">clothing</a></li>
-												<li><a href="shop-gird.html">Delivery</a></li>
-											</ul>
-										</div>
+							@foreach($parent_categories as $item)
+								<li class=""><a href="i#">{!! $item->name !!}</a>
+									<div class="home-var-menu">
+										<ul class="home-menu">
+											@foreach($sub_categories as $subitem)
+												@if($item->id == $subitem->parent_id)
+													<li><a href="#">{!! $subitem->name !!}</a></li>
+												@endif()
+											@endforeach()
+										</ul>
 									</div>
-									<div class="right-mega col-xs-6">
-										<div class="mega-menu-list">
-											<a class="mega-menu-title" href="shop-gird.html">Prodect</a>
-											<ul>
-												<li><a href="shop-gird.html">T-shirts</a></li>
-												<li><a href="shop-gird.html">clothing</a></li>
-												<li><a href="shop-gird.html">Watch</a></li>
-												<li><a href="shop-gird.html">Delivery</a></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<!-- DRODOWN-MEGA-MENU END -->
-							</li>
+								</li>
+							@endforeach()
 						</ul>
 					</nav>
 				</div>
@@ -106,50 +91,50 @@
 								<ul>
 									<li><a href="index.html">Home variation 1</a></li>
 									<li><a href="index-2.html">Home variation 2</a></li>
-								</ul>														
-							</li>								
+								</ul>
+							</li>
 							<li><a href="shop-gird.html">Women</a>
 								<ul>
 									<li><a href="shop-gird.html">Tops</a>
 										<ul>
 											<li><a href="shop-gird.html">T-Shirts</a></li>
 											<li><a href="shop-gird.html">Blouses</a></li>
-										</ul>													
+										</ul>
 									</li>
 									<li><a href="shop-gird.html">Dresses</a>
 										<ul>
 											<li><a href="shop-gird.html">Casual Dresses</a></li>
 											<li><a href="shop-gird.html">Summer Dresses</a></li>
-											<li><a href="shop-gird.html">Evening Dresses</a></li>	
-										</ul>	
+											<li><a href="shop-gird.html">Evening Dresses</a></li>
+										</ul>
 									</li>
 
 								</ul>
 							</li>
 							<li><a href="shop-gird.html">men</a>
-								<ul>											
+								<ul>
 									<li><a href="shop-gird.html">Tops</a>
 										<ul>
 											<li><a href="shop-gird.html">Sports</a></li>
 											<li><a href="shop-gird.html">Day</a></li>
 											<li><a href="shop-gird.html">Evening</a></li>
-										</ul>														
+										</ul>
 									</li>
 									<li><a href="shop-gird.html">Blouses</a>
 										<ul>
 											<li><a href="shop-gird.html">Handbag</a></li>
 											<li><a href="shop-gird.html">Headphone</a></li>
 											<li><a href="shop-gird.html">Houseware</a></li>
-										</ul>														
+										</ul>
 									</li>
 									<li><a href="shop-gird.html">Accessories</a>
 										<ul>
 											<li><a href="shop-gird.html">Houseware</a></li>
 											<li><a href="shop-gird.html">Home</a></li>
 											<li><a href="shop-gird.html">Health & Beauty</a></li>
-										</ul>														
+										</ul>
 									</li>
-								</ul>										
+								</ul>
 							</li>
 							<li><a href="shop-gird.html">clothing</a></li>
 							<li><a href="shop-gird.html">tops</a></li>

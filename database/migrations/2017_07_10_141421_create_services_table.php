@@ -21,8 +21,9 @@ class CreateServicesTable extends Migration
             $table->string('description');
             $table->string('alias');
             $table->string('content');
-            $table->string('image');
-            $table->integer('user_id');
+            $table->string('icon');
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

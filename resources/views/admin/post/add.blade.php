@@ -125,22 +125,6 @@
 
                     </div>
                 </div>
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption font-black-sunglo">
-                            <span class="caption-subject bold uppercase">Category</span>
-                        </div>
-                    </div>
-                    <div class="portlet-body form">
-                        <div class="form-group">
-                            <select class="form-control" name="category">
-                                <option value="">Select Category</option>
-                                <?php cate_parent($category); ?>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
               <div class="portlet light bordered">
                     <div class="portlet-title">
                         <div class="caption font-black-sunglo">

@@ -127,24 +127,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="portlet light bordered">
-                    <div class="portlet-title">
-                        <div class="caption font-black-sunglo">
-                            <span class="caption-subject bold uppercase">Category</span>
-                        </div>
-                    </div>
-                    <div class="portlet-body form">
-                        <div class="form-group">
-                            <select class="form-control" name="category">
-                                <option value={!! $data[0]->cid !!}>{!! $data[0]->cname !!}</option>
-                                @foreach($otherCategory as $item)
-                                    <option value={!! $item->id !!}>{!! $item->name !!}</option>
-                                @endforeach()
-                            </select>
-                        </div>
-                    </div>
-                </div>
                 <div class="portlet light bordered">
                     <div class="portlet-title">
                         <div class="caption font-black-sunglo">

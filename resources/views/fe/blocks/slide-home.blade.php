@@ -5,29 +5,23 @@
 				<div id="wrapper">
 					<div class="slider-wrapper">
 						<div id="mainSlider" class="nivoSlider">
-							<img src="img/slider/2.jpg" alt="main slider" title="#htmlcaption"/>
-							<img src="img/slider/1.jpg" alt="main slider" title="#htmlcaption2"/>
+							@foreach($slides as $item)
+								<img src="{!! asset($item->image)  !!}" alt="main slider" title="#htmlcaption{!! $item->id !!}"/>
+							@endforeach()
 						</div>
-						<div id="htmlcaption" class="nivo-html-caption slider-caption">
+						@foreach($slides as $item)
+						<div id="htmlcaption{!! $item->id !!}" class="nivo-html-caption slider-caption">
 							<div class="slider-progress"></div>
 							<div class="slider-cap-text slider-text1">
 								<div class="d-table-cell">
-									<h2 class="animated bounceInDown">BEST THEMES</h2>
-									<p class="animated bounceInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod ut laoreet dolore magna aliquam erat volutpat.</p>	
-									<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More <i class="fa fa-caret-right"></i></a>													
+									<h2 class="animated bounceInDown">{!! $item->textlink !!}</h2>
+									<p class="animated bounceInUp">{!! $item->title !!}</p>
+									<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="{!! $item->link !!}">Read More <i class="fa fa-caret-right"></i></a>
 								</div>
 							</div>
 						</div>
-						<div id="htmlcaption2" class="nivo-html-caption slider-caption">
-							<div class="slider-progress"></div>
-							<div class="slider-cap-text slider-text2">
-								<div class="d-table-cell">
-									<h2 class="animated bounceInDown">BEST THEMES</h2>
-									<p class="animated bounceInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod ut laoreet dolore magna aliquam erat volutpat.</p>	
-									<a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="#">Read More <i class="fa fa-caret-right"></i></a>
-								</div>
-							</div>
-						</div>
+						@endforeach()
+
 					</div>
 				</div>
 			</div>
